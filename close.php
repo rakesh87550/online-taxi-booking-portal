@@ -1,0 +1,12 @@
+<?php
+session_start();
+unset($_SESSION['user-name']);
+unset($_SESSION['user-email']);
+unset($_SESSION['user-phone']);
+unset($_SESSION['user-address']);
+unset($_SESSION['taxi-number']);
+unset($_SESSION['total-cost']);
+unset($_SESSION['date']);
+unset($_SESSION['time']);
+header("location:index.php");
+die();

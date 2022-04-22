@@ -1,0 +1,5 @@
+[01-Oct-2020 12:49:13 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home4/encodlng/sometaxi.com/showcars.php on line 128
+[02-Nov-2020 15:06:32 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home4/encodlng/sometaxi.com/showcars.php on line 128
+[02-Nov-2020 15:46:58 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home4/encodlng/sometaxi.com/showcars.php on line 128
+[19-Nov-2020 13:05:28 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/encodlng/sometaxi.com/updateprofile.php on line 8
+[19-Nov-2020 13:05:49 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/encodlng/sometaxi.com/updateprofile.php on line 8
