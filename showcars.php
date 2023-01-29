@@ -6,10 +6,11 @@ if (isset($_POST['submit'])) {
 	$tdes = strtoupper($_POST['tdes']);
 	$tdate = $_POST['tdate'];
 	$ttype = strtoupper($_POST['ttype']);
+	$tcar = strtoupper($_POST['tcar']);
 	$tsit = number_format($_POST['tsit']);
 	$tadult = number_format($_POST['tadult']);
 	$tchild = number_format($_POST['tchild']);
-	$selquery = "SELECT * FROM taxicar WHERE placefrom = '$tfrom' AND destination = '$tdes' AND date = '$tdate' AND sitnumber = '$tsit' AND status = '0'";
+	$selquery = "SELECT * FROM taxicar WHERE placefrom = '$tfrom' AND destination = '$tdes' AND date = '$tdate' AND taxiname = '$tcar' AND status = '0'";
 	$result = mysqli_query($conn, $selquery);
 }
 ?>

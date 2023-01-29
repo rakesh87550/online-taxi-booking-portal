@@ -1,29 +1,3 @@
-<?php
-// connection
-include_once("database_con.php");
-if (isset($_POST['submit'])) {
-	$name = mysqli_real_escape_string($conn, $_POST['name']);
-	$phone = mysqli_real_escape_string($conn, $_POST['phone']);
-	$email = mysqli_real_escape_string($conn, $_POST['email']);
-	$tfrom = mysqli_real_escape_string($conn, $_POST['tfrom']);
-	$tdes = mysqli_real_escape_string($conn, $_POST['tdes']);
-	$tcar = mysqli_real_escape_string($conn, $_POST['tcar']);
-	$tdate = mysqli_real_escape_string($conn, $_POST['tdate']);
-	$ttype = mysqli_real_escape_string($conn, $_POST['ttype']);
-	$time = mysqli_real_escape_string($conn, $_POST['time']);
-	// send  mail    
-	$des_email = "rakeshsaha87550@gmail.com";
-	$subject = "SEARCH TAXI";
-	$body = "Name : $name || Phone : $phone || Email Id : $email || Pickup Place : $tfrom || Destination : $tdes || Car : $tcar ||$ttype || Date : $date || Time : $time";
-	$sender_mail = "From : $email";
-	if (mail($des_email, $subject, $body, $sender_mail)) {
-		echo "<script>window.open('index.php', '_self')</script>";
-	} else {
-		$msg =  "Email sending failed....!";
-	}
-}
-?>
-
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -133,20 +107,16 @@ if (isset($_POST['submit'])) {
 											<li role="presentation">
 												<a href="#roundtrip" aria-controls="roundtrip" role="tab" data-toggle="tab">Round Trip</a>
 											</li>
-											<!-- <li role="presentation">
-												<a href="#packages" aria-controls="packages" role="tab" data-toggle="tab">Packages</a>
-											</li> -->
 										</ul>
 
 										<!-- Tab panes -->
 										<div class="tab-content">
 											<div role="tabpanel" class="tab-pane active" id="localtaxi">
 												<div class="row">
-													<form method="POST" action="">
+													<form method="POST" action="showcars.php">
 														<div class="col-xxs-12 col-xs-6 mt">
 															<div class="input-field">
 																<label for="from">From:</label>
-																<!--<input type="text" name="tfrom" class="form-control" id="from-place" placeholder="Siliguri , West Bengal" disabled />-->
 																<select class="cs-select cs-skin-border" name="tfrom" id="from-place">
 																	<option value="" disabled>Pickup Place</option>
 																	<option value="Lataguri">Lataguri</option>
@@ -154,23 +124,12 @@ if (isset($_POST['submit'])) {
 																	<option value="Murti">Murti</option>
 																	<option value="Moynaguri">Moynaguri</option>
 																	<option value="Jalpaiguri">Jalpaiguri</option>
-																	<option value="Banarhat">Banarhat</option>
-																	<option value="Binnaguri">Binnaguri</option>
-																	<option value="Oodlabari">Oodlabari</option>
-																	<option value="Gazoldoba">Gazoldoba</option>
-																	<option value="Talipara more">Talipara more</option>
-																	<option value="Birpara Falakata">Birpara Falakata</option>
-																	<option value="Falakata">Falakata</option>
-																	<option value="Dhupguri">Dhupguri</option>
-																	<option value="Alipurduar">Alipurduar</option>
-																	<option value="Jaygaon">Jaygaon</option>
 																</select>
 															</div>
 														</div>
 														<div class="col-xxs-12 col-xs-6 mt">
 															<div class="input-field">
 																<label for="to">To:</label>
-																<!--<input type="text" name="tdes" class="form-control" id="to-place" placeholder="Destination City" required="true" autocomplete="off" />-->
 																<select class="cs-select cs-skin-border" name="tdes" id="to-place">
 																	<option value="" disabled>Destination Place</option>
 																	<option value="Malbazar">Malbazar</option>
@@ -179,12 +138,6 @@ if (isset($_POST['submit'])) {
 																	<option value="Bagdogra">Bagdogra</option>
 																	<option value="Samsing Suntalekhola">Samsing Suntalekhola</option>
 																	<option value="Jhalong Bindu">Jhalong Bindu</option>
-																	<option value="Murti">Murti</option>
-																	<option value="Darjeeling">Darjeeling</option>
-																	<option value="lava,Delo,Kalimpong">lava,Delo,Kalimpong</option>
-																	<option value="Jaldapara">Jaldapara</option>
-																	<option value="Hassimar">Hassimar</option>
-																	<option value="Lataguri">Lataguri</option>
 																</select>
 															</div>
 														</div>
@@ -197,12 +150,10 @@ if (isset($_POST['submit'])) {
 														<div class="col-xxs-12 col-xs-6 mt alternate">
 															<div class="input-field">
 																<label for="package">Package Type</label>
-																<!--<input type="text" name="ttype" class="form-control" id="package" placeholder="Package Type" required="true" />-->
 																<select class="cs-select cs-skin-border" name="ttype" id="package">
 																	<option value="" disabled>Package Type</option>
 																	<option value="ac">AC Car</option>
 																	<option value="nonac">NON AC Car</option>
-																	<!--<option>4</option>-->
 																</select>
 															</div>
 														</div>
@@ -224,36 +175,12 @@ if (isset($_POST['submit'])) {
 															<section>
 																<label for="class">Name:</label>
 																<input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name" required="true" autocomplete="off" />
-																<!-- <select class="cs-select cs-skin-border" name="tadult">
-																	<option value="" disabled>Select Adults</option>
-																	<option value="0">0</option>
-																	<option value="1">1</option>
-																	<option value="2">2</option>
-																	<option value="3">3</option>
-																	<option value="4">4</option>
-																	<option value="5">5</option>
-																	<option value="6">6</option>
-																	<option value="7">7</option>
-																	<option value="8">8</option>
-																</select> -->
 															</section>
 														</div>
 														<div class="col-xxs-12 col-xs-6 mt">
 															<section>
 																<label for="class">Phone Number:</label>
 																<input type="text" name="phone" class="form-control" id="phone" placeholder="Enter Your Number" required="true" autocomplete="off" />
-																<!-- <select class="cs-select cs-skin-border" name="tchild">
-																	<option value="" disabled>Select Children</option>
-																	<option value="0">0</option>
-																	<option value="1">1</option>
-																	<option value="2">2</option>
-																	<option value="3">3</option>
-																	<option value="4">4</option>
-																	<option value="5">5</option>
-																	<option value="6">6</option>
-																	<option value="7">7</option>
-																	<option value="8">8</option>
-																</select> -->
 															</section>
 														</div>
 														<div class="col-sm-12 mt col-xs-6 mt">
@@ -279,6 +206,7 @@ if (isset($_POST['submit'])) {
 																<select class="cs-select cs-skin-border" name="tfrom">
 																	<option value="" disabled>Pickup Place</option>
 																	<option value="siliguri, westbengal">Siliguri, WestBengal</option>
+																	<option value="siliguri, westbengal">Murti</option>
 																</select>
 															</div>
 														</div>
@@ -288,6 +216,7 @@ if (isset($_POST['submit'])) {
 																<!--<input type="text" name="tdes1" class="form-control" id="to-place" placeholder="Destination City" required="true" />-->
 																<select class="cs-select cs-skin-border" name="tdes1">
 																	<option value="" disabled>Destination Place 1</option>
+																	<option value="darjeeling">Lava Sight seen</option>
 																	<option value="darjeeling">Darjeeling</option>
 																</select>
 															</div>
@@ -297,7 +226,8 @@ if (isset($_POST['submit'])) {
 																<label for="from">To: </label>
 																<!--<input type="text" name="tdes2" class="form-control" id="to-place" placeholder="Destination City" required="true" />-->
 																<select class="cs-select cs-skin-border" name="tdes2">
-																	<option value="" disabled>Destination Place 2</option>
+																<option value="" disabled>Destination Place 2</option>
+																	<option value="siliguri, westbengal">Murti</option>
 																	<option value="gangtok">Gangtok</option>
 																</select>
 															</div>

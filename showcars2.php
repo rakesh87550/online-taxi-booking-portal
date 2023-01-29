@@ -2,14 +2,14 @@
 // connection
 include_once("database_con.php");
 if (isset($_POST['submit'])) {
-    $tfrom = strtoupper("siliguri, westbengal");
+    $tfrom = strtoupper($_POST['tfrom']);
     $tdes1 = strtoupper($_POST['tdes1']);
     $tdes2 = strtoupper($_POST['tdes2']);
     $tdate = $_POST['tdate'];
     $tsit = number_format($_POST['tsit']);
     $tadult = number_format($_POST['tadult']);
     $tchild = number_format($_POST['tchild']);
-    $selquery = "SELECT * FROM roundtrip WHERE placefrom = '$tfrom' AND placeto2 = '$tdes2' AND date = '$tdate' AND sitnumber = '$tsit' AND status = 0";
+    $selquery = "SELECT * FROM roundtrip WHERE placefrom = '$tfrom' AND placeto2 = '$tdes2' AND date = '$tdate' AND taxiname = '$tsit' AND status = 0";
     $result = mysqli_query($conn, $selquery);
 }
 ?>
