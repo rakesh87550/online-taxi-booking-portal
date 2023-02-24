@@ -11,7 +11,7 @@ $result = mysqli_query($conn, $selquery);
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SOMETAXI &mdash; A Unit of Some Group</title>
+    <title>BOOKCAB</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />
@@ -58,32 +58,32 @@ $result = mysqli_query($conn, $selquery);
         <div id="fh5co-page">
             <!-- start header-top -->
             <header id="fh5co-header-section" class="sticky-banner">
-                <div class="container">
-                    <div class="nav-header">
-                        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"></a>
-                        <!-- <img src="images/logo.png" alt="Sometaxi" width="250px" height="180px"> -->
-                        <h1 id="fh5co-logo"><a href="../index.php"><i class="fa fa-taxi"></i>SOMETAXI<span style="font-size: 16px;letter-spacing: 0px;">A Unit of Some Group</span></a></h1>
-                        <!-- START #fh5co-menu-wrap -->
-                        <nav id="fh5co-menu-wrap" role="navigation">
-                            <ul class="sf-menu" id="fh5co-primary-menu">
-                                <li><a href="../index.php">Home</a></li>
-                                <li>
-                                    <a href="#" class="fh5co-sub-down">Taxi Service</a>
-                                    <ul class="fh5co-sub-menu">
-                                        <li><a href="#">Local Taxi</a></li>
-                                        <li><a href="#">Round Trip</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="https://www.somegroup.in" target="_blank">Some Hotels</a></li>
-                                <li class="active"><a href="drycar/index.php">Dry Car</a></li>
-                                <li><a href="../contact.php">Contact Us</a></li>
-                                <li><a href="../registercar.php" class="btn btn-primary btn-outline">Register Car</a></li>
-                                <li><a href="../login.php" class="btn btn-primary btn-outline">Login</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </header>
+				<div class="container">
+					<div class="nav-header">
+						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"></a>
+						<!-- <img src="images/logo.png" alt="Sometaxi" width="250px" height="180px"> -->
+						<h1 id="fh5co-logo"><a href="../index.php"><i class="fa fa-taxi"></i>BOOKCAB<span style="font-size: 16px;letter-spacing: 0px;">A Complete Solution of Taxi</span></a></h1>
+						<!-- START #fh5co-menu-wrap -->
+						<nav id="fh5co-menu-wrap" role="navigation">
+							<ul class="sf-menu" id="fh5co-primary-menu">
+								<li><a href="../index.php">Home</a></li>
+								<li>
+									<a href="#" class="fh5co-sub-down">Taxi Service</a>
+									<ul class="fh5co-sub-menu">
+										<li><a href="#">Local Taxi</a></li>
+										<li><a href="#">Round Trip</a></li>
+									</ul>
+								</li>
+								<li><a href="#" target="_blank">Hotels</a></li>
+								<li class="active"><a href="drycar/index.php">Dry Car</a></li>
+								<li><a href="contact.php">Contact Us</a></li>
+								<li><a href="registercar.php" class="btn btn-primary btn-outline">Register Car</a></li>
+								<li><a href="login.php" class="btn btn-primary btn-outline">Login</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
             <!-- end header-top -->
 
             <!-- show all taxi -->
@@ -148,10 +148,10 @@ $result = mysqli_query($conn, $selquery);
                 <div id="footer">
                     <div class="container">
                         <div class="row row-bottom-padded-md">
-                            <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
-                                <h3>About SomeTaxi</h3>
-                                <p>SomeTaxi offers the best cab operators and drivers for every prime location of Dooars to make your journey hassle free. We ensure to provide the unforgettable experience to our customers.</p>
-                            </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+								<h3>About BookCab</h3>
+								<p>BookCab offers the best cab operators and drivers for every prime location of Dooars to make your journey hassle free. We ensure to provide the unforgettable experience to our customers.</p>
+							</div>
                             <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
                                 <h3>Top Hotels</h3>
                                 <ul>
@@ -191,13 +191,13 @@ $result = mysqli_query($conn, $selquery);
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3 text-center">
                                 <p class="fh5co-social-icons">
-                                    <!-- <a href="#"><i class="icon-twitter2"></i></a> -->
-                                    <a href="https://www.facebook.com/Some-Taxi-101657141777626/?modal=admin_todo_tour"><i class="icon-facebook2"></i></a>
-                                    <a href="https://www.instagram.com/sometaxi/"><i class="icon-instagram"></i></a>
-                                    <!-- <a href="#"><i class="icon-dribbble2"></i></a> -->
-                                    <!-- <a href="#"><i class="icon-youtube"></i></a> -->
+                                <a href="#"><i class="icon-twitter2"></i></a>
+									<a href="#"><i class="icon-facebook2"></i></a>
+									<a href="#"><i class="icon-instagram"></i></a>
+									<!-- <a href="#"><i class="icon-dribbble2"></i></a> -->
+									<a href="#"><i class="icon-youtube"></i></a>
                                 </p>
-                                <p>Copyright <?php echo date('Y'); ?> <a href="www.sometaxi.com">SomeTaxi</a> &nbsp;||&nbsp; Design By<a href="https://encodeinformatics.com" target="_blank"><img src="../carimages/web.png" alt="" width="140px" height="50px"></a></p>
+                                <p>Copyright <?php echo date('Y'); ?> <a href="#">BookCab</a></p>
                             </div>
                         </div>
                     </div>
